@@ -1,5 +1,5 @@
 {
-  "name": "react-native-gradient-button",
+  "name": "@prateek05/react-native-gradient-button",
   "version": "0.1.0",
   "description": "A customizable gradient button component for React Native.",
   "main": "lib/index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/05prateek/react-native-gradient-button.git"
+    "url": "git+https://github.com/prateek05/react-native-gradient-button.git"
   },
   "keywords": [
     "react-native",
@@ -24,9 +24,9 @@
   "author": "Prateek Rawat",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/05prateek/react-native-gradient-button/issues"
+    "url": "https://github.com/prateek05/react-native-gradient-button/issues"
   },
-  "homepage": "https://github.com/05prateek/react-native-gradient-button#readme",
+  "homepage": "https://github.com/prateek05/react-native-gradient-button#readme",
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
@@ -36,6 +36,7 @@
   "devDependencies": {
     "@types/react": "^18.2.0",
     "@types/react-native": "^0.72.0",
+    "@types/react-native-linear-gradient": "^2.4.0",
     "typescript": "^5.0.0"
   }
 }
