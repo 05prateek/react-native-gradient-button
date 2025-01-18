@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
 export default App;
 ```
 ## Screenshots
-![Screenshot](./assets/basic.png)
+![Screenshot](./assets/Screenshot.jpg)
 
 ## Accessibility
 
