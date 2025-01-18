@@ -1,17 +1,22 @@
 # React Native Gradient Button
 
-A customizable gradient button component for React Native with support for linear gradients.
+[![npm version](https://img.shields.io/npm/v/@gradient-border/react-native-gradient-button.svg)](https://www.npmjs.com/package/@gradient-border/react-native-gradient-button)
+[![npm downloads](https://img.shields.io/npm/dm/@gradient-border/react-native-gradient-button.svg)](https://www.npmjs.com/package/@gradient-border/react-native-gradient-button)
+[![License](https://img.shields.io/npm/l/@gradient-border/react-native-gradient-button.svg)](https://github.com/05prateek/react-native-gradient-button/blob/main/LICENSE)
 
-## Features
+A powerful and customizable gradient button component for React Native that supports both gradient borders and text. Perfect for creating beautiful, modern UI elements with minimal effort.
 
-- 🎨 Beautiful gradient border and text
-- 📱 Fully customizable styles
-- 🎯 TypeScript support
+## ✨ Features
+
+- 🎨 Beautiful gradient borders and text effects
+- 📱 Fully customizable styles and animations
+- 🎯 Written in TypeScript with full type support
 - 📏 Flexible sizing and positioning
-
+- ♿ Built-in accessibility support
+- 📦 Lightweight with minimal dependencies
+- 📱 Works on both iOS and Android
 
 ## Installation
-
 
 npm
 
@@ -238,3 +243,12 @@ The following style properties are not allowed and will be ignored with a warnin
 - color (in textStyle)
 - textDecorationColor (in textStyle)
 - textShadowColor (in textStyle)
+
+## 🚀 Why Choose This Package?
+
+- Modern API with TypeScript support
+- Highly customizable gradient effects
+- Excellent performance with minimal re-renders
+- Comprehensive documentation
+- Small bundle size
+
