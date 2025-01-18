@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     TouchableOpacity,
     View,
@@ -170,7 +170,8 @@ const GradientButton: React.FC<GradientButtonProps> = ({
     };
 
     const { outerStyle, innerStyle } = splitStyle(style);
-
+    const [Height,setHeight] = useState<number>(0);
+    const st = styles(Height / 10);
     return (
         <View style={outerStyle}>
             <TouchableOpacity
@@ -181,14 +182,14 @@ const GradientButton: React.FC<GradientButtonProps> = ({
                 accessibilityLabel={accessibilityLabel || text}
                 accessibilityHint={accessibilityHint}
                 {...touchableProps}
-                style={styles.button}
+                style={st.button}
             >
-                <View style={styles.buttonContent}>
+                <View style={st.buttonContent}>
                     <MaskedView
                         maskElement={
                             <View
                                 pointerEvents="none"
-                                style={[styles.maskContainer, innerStyle]}
+                                style={[st.maskContainer, innerStyle]}
                                 collapsable={false}
                             >
                                 {loading ? (
@@ -197,7 +198,7 @@ const GradientButton: React.FC<GradientButtonProps> = ({
                                         size={loadingSize}
                                     />
                                 ) : (
-                                    <Text style={[styles.buttonText, textStyle]}>
+                                    <Text style={[st.buttonText, textStyle]}>
                                         {text}
                                     </Text>
                                 )}
@@ -224,7 +225,7 @@ const GradientButton: React.FC<GradientButtonProps> = ({
     );
 };
 
-const styles = StyleSheet.create({
+const styles = (height:number) => StyleSheet.create({
     button: {
         width: '100%',
     },
@@ -235,8 +236,8 @@ const styles = StyleSheet.create({
     maskContainer: {
         width: '100%',//should not be changed
         height: '100%',//should not be changed
-        borderRadius: 60,
-        padding: '10%',
+
+        padding: height / 10,
     },
     innerButton: {
         flexDirection: 'row',
