@@ -16,13 +16,13 @@ A customizable gradient button component for React Native with support for linea
 npm
 
 ```bash
-npm install react-native-gradient-button
+npm install @gradient-border/react-native-gradient-button
 ```
 
 yarn
 
 ```bash
-yarn add react-native-gradient-button
+yarn add @gradient-border/react-native-gradient-button
 ```
 
 ### Dependencies
@@ -104,6 +104,104 @@ useAngle={true}
 angle={45}
 />
 ```
+
+## Example
+```tsx
+import React from 'react';
+import {
+  SafeAreaView,
+
+  StyleSheet,
+
+  ImageBackground,
+} from 'react-native';
+import GradientButton from '@gradient-border/react-native-gradient-button';
+
+
+function App(): JSX.Element {
+
+
+  return (
+    <ImageBackground 
+      source={{ uri: 'https://images.pexels.com/photos/3265460/pexels-photo-3265460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }}
+      style={styles.backgroundImage}
+    >
+      <SafeAreaView style={[styles.container]}>
+
+            <GradientButton
+              text="Vertical Gradient Button"
+              textStyle={styles.ButtonText}
+              colors={['red', 'yellow', 'orange', 'green', 'cyan']}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 0, y: 1 }}
+              onPress={() => console.log('Primary pressed')}
+              style={styles.button}
+            />
+
+            <GradientButton
+              text="Horizotal Gradient Button"
+              textStyle={styles.ButtonText}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
+              colors={['red', 'yellow', 'blue']}
+              onPress={() => console.log('Secondary pressed')}
+              style={styles.button}
+            />
+
+            <GradientButton
+              text="Angular Gradient Button"
+              textStyle={styles.ButtonText}
+              useAngle={true}
+              angle={45}
+              angleCenter={{x:0.5,y:0.5}}
+              colors={['red', 'yellow', 'blue']}
+              onPress={() => console.log('Secondary pressed')}
+              style={styles.button}
+            />
+
+
+      </SafeAreaView>
+    </ImageBackground>
+  );
+}
+
+
+
+const styles = StyleSheet.create({
+  backgroundImage: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+
+  },
+  container: {
+    flex: 1,
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+  },
+
+ 
+
+  button: {
+    marginTop: 4,
+    borderRadius: 10,
+    borderWidth:4.5,
+    height: '10%',
+    width: '80%',
+    justifyContent: 'center',
+    alignItems: 'center',
+
+  },
+  ButtonText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+});
+
+export default App;
+```
+## Screenshots
+![Screenshot](./assets/basic.png)
 
 ## Accessibility
 
